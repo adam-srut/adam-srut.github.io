@@ -1,0 +1,185 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+header {
+    background-image: url('./header.jpg');
+    background-size: cover; /* Cover the entire header */
+    background-position: center; /* Center the background image */
+    color: rgb(255, 255, 255); /* Text color */
+    text-align: center; /* Center align text */
+    padding: 0em 0; /* Padding top and bottom */
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    max-height: 300px; /* Max height of the header */
+    overflow: hidden; /* Hide overflow */
+    display: flex; /* Flex display for centering */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+}
+header h1 {
+    color: white; /* Text color */
+    text-align: center; /* Center align text */
+    padding: 30px 0; /* Padding top and bottom */
+    width: 100%;
+    max-height: 300px; /* Max height of the header */
+    overflow: hidden; /* Hide overflow */
+    display: flex; /* Flex display for centering */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    text-shadow: 
+        -1px -1px 0 #000,  
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000; /* Black outline */
+}
+header img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    max-height: 150px; /* Ensure image does not exceed max height */
+}
+.sidebar {
+    width: 200px;
+    background-color: #333;
+    position: fixed;
+    top: 80px; /* Height of the header */
+    left: 0;
+    bottom: 0;
+    overflow-x: hidden;
+    padding-top: 80px;
+}
+.sidebar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: block;
+}
+.sidebar a:hover {
+    background-color: #575757;  
+}
+.gallery {
+    display: grid;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /* grid-template-columns: repeat(minmax(200px, 1fr), auto-fit); */
+    grid-column-gap: 5px;
+}
+.gallery .image-container {
+    position: relative;
+    /* width: 40%; */
+    max-width: 70%;
+    min-width: 100px;
+    justify-items: center;
+    margin: 20px auto;
+    /* aspect-ratio: 1; */
+    /* overflow: hidden; */
+}
+.gallery .image-container img {
+    width: 100%;
+    height: auto;
+    /* object-fit: contain; */
+    /* max-height: 400px; */
+    display: block;
+}
+.gallery img {
+    position: relative;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.2s;
+    object-fit: contain;
+}
+.gallery img:hover {
+    transform: scale(1.08);
+    /* rotate: 90deg; */
+}
+.contact {
+    text-align: center;
+    margin-top: 40px;
+}
+.contact h2 {
+    color: #333;
+}
+.contact p {
+    color: #555;
+}
+.contact a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+}
+.contact a:hover {
+    text-decoration: underline;
+}
+.main {
+    margin-top: 280px;
+    margin-left: 220px; /* Width of the sidebar + some gap */
+    padding: 20px;
+    padding-top: 20px; /* Height of the header + some gap */
+    width: calc(100% - 20px);
+}
+/* Modal container */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1001; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.8); /* Black with opacity */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+/* Modal content (image) */
+.modal-content {
+    max-width: 90%;
+    max-height: 90%;
+}
+.modal:target {
+    display: flex;
+}
+/* Close button */
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Show the modal when targeted */
+.modal:target {
+    display: flex;
+}
+/* Set a maximum number of columns */
+@media (min-width: 900px) {
+    .gallery {
+        grid-template-columns: repeat(3, 1fr); /* Maximum of 3 columns */
+    }
+}

@@ -6,175 +6,20 @@
     <title>Scientific Journal Cover Arts</title>
     <meta name="description" content="Front covers for scientific journals.">
     <meta name="keywords" content="scientific journal, cover art, journal cover, publication design">
+    <link rel="canocical" href="https://adam-srut.github.io/index.html">
     <!-- <meta name="author" content="Your Name or Your Company"> -->
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            display: flex;
-        }
-        header {
-            background-image: url('header.png');
-            background-size: cover; /* Cover the entire header */
-            background-position: center; /* Center the background image */
-            color: rgb(255, 255, 255); /* Text color */
-            text-align: center; /* Center align text */
-            padding: 0em 0; /* Padding top and bottom */
-            width: 100%;
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 1000;
-            max-height: 300px; /* Max height of the header */
-            overflow: hidden; /* Hide overflow */
-            display: flex; /* Flex display for centering */
-            justify-content: center; /* Center content horizontally */
-            align-items: center; /* Center content vertically */
-        }
-        header h1 {
-            color: white; /* Text color */
-            text-align: center; /* Center align text */
-            padding: 30px 0; /* Padding top and bottom */
-            width: 100%;
-            max-height: 300px; /* Max height of the header */
-            overflow: hidden; /* Hide overflow */
-            display: flex; /* Flex display for centering */
-            justify-content: center; /* Center content horizontally */
-            align-items: center; /* Center content vertically */
-            text-shadow: 
-                -1px -1px 0 #000,  
-                1px -1px 0 #000,
-                -1px 1px 0 #000,
-                1px 1px 0 #000; /* Black outline */
-        }
-        header img {
-            width: 100%;
-            height: auto; /* Maintain aspect ratio */
-            max-height: 150px; /* Ensure image does not exceed max height */
-        }
-        .sidebar {
-            width: 200px;
-            background-color: #333;
-            position: fixed;
-            top: 110px; /* Height of the header */
-            left: 0;
-            bottom: 0;
-            overflow-x: hidden;
-            padding-top: 80px;
-        }
-        .sidebar a {
-            padding: 10px 15px;
-            text-decoration: none;
-            font-size: 18px;
-            color: white;
-            display: block;
-        }
-        .sidebar a:hover {
-            background-color: #575757;  
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        .gallery {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-        }
-        .gallery .image-container {
-            position: relative;
-            width: 100%;
-            max-width: 300px;
-            /* max-height: 100px; */
-            padding-bottom: 400px; /* 25%; 4:3 Aspect Ratio */
-        }
-        .gallery img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-            transition: transform 0.2s;
-            object-fit: contain;
-        }
-        .gallery img:hover {
-            transform: scale(1.08);
-            /* rotate: 90deg; */
-        }
-        .contact {
-            text-align: center;
-            margin-top: 40px;
-        }
-        .contact h2 {
-            color: #333;
-        }
-        .contact p {
-            color: #555;
-        }
-        .contact a {
-            color: #4CAF50;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .contact a:hover {
-            text-decoration: underline;
-        }
-        .main {
-            margin-left: 220px; /* Width of the sidebar + some gap */
-            padding: 20px;
-            padding-top: 220px; /* Height of the header + some gap */
-            width: calc(100% - 220px);
-        }
-        /* Modal container */
-        .modal {
-            display: none; /* Hidden by default */
-            position: fixed; /* Stay in place */
-            z-index: 1001; /* Sit on top */
-            left: 0;
-            top: 0;
-            width: 100%; /* Full width */
-            height: 100%; /* Full height */
-            overflow: auto; /* Enable scroll if needed */
-            background-color: rgba(0,0,0,0.8); /* Black with opacity */
-            justify-content: center; /* Center horizontally */
-            align-items: center; /* Center vertically */
-        }
 
-        /* Modal content (image) */
-        .modal-content {
-            max-width: 90%;
-            max-height: 90%;
-        }
-
-        /* Close button */
-        .close {
-            position: absolute;
-            top: 20px;
-            right: 35px;
-            color: #fff;
-            font-size: 40px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-
-        .close:hover,
-        .close:focus {
-            color: #bbb;
-            text-decoration: none;
-            cursor: pointer;
-        }
-
-        /* Show the modal when targeted */
-        .modal:target {
-            display: flex;
-        }
-    </style>
+    <!-- Open Graph Tags for social media -->
+    <meta property="og:title" content="Scientific Journal Cover Arts | Custom Designs">
+    <meta property="og:description" content="Explore and create stunning cover arts for scientific journals. Custom designs to make your publication stand out.">
+    <meta property="og:image" content="https://adam-srut.github.io/header.jpg">
+    <meta property="og:url" content="https://adam-srut.github.io/header.jpg">
+    <meta property="og:type" content="website">
+    <!-- Robots Meta Tag -->
+    <meta name="robots" content="index, follow">
+    
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
@@ -211,6 +56,7 @@
         <img class="modal-content" src="anie202411210-toc-0001-m.jpg" alt="Angewandte Chemie 2024">
     </div>
     
+    <script async data-id="101458444" src="//static.getclicky.com/js"></script>
 </body>
 </html>
 

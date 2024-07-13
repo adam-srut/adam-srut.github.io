@@ -4,180 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scientific Journal Cover Arts</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            display: flex;
-        }
-        header {
-            background-image: url('header.png');
-            background-size: cover; /* Cover the entire header */
-            background-position: center; /* Center the background image */
-            color: rgb(255, 255, 255); /* Text color */
-            text-align: center; /* Center align text */
-            padding: 0em 0; /* Padding top and bottom */
-            width: 100%;
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 1000;
-            max-height: 300px; /* Max height of the header */
-            overflow: hidden; /* Hide overflow */
-            display: flex; /* Flex display for centering */
-            justify-content: center; /* Center content horizontally */
-            align-items: center; /* Center content vertically */
-        }
-        header h1 {
-            color: white; /* Text color */
-            text-align: center; /* Center align text */
-            padding: 30px 0; /* Padding top and bottom */
-            width: 100%;
-            max-height: 300px; /* Max height of the header */
-            overflow: hidden; /* Hide overflow */
-            display: flex; /* Flex display for centering */
-            justify-content: center; /* Center content horizontally */
-            align-items: center; /* Center content vertically */
-            text-shadow: 
-                -1px -1px 0 #000,  
-                1px -1px 0 #000,
-                -1px 1px 0 #000,
-                1px 1px 0 #000; /* Black outline */
-        }
-        header img {
-            width: 100%;
-            height: auto; /* Maintain aspect ratio */
-            max-height: 150px; /* Ensure image does not exceed max height */
-        }
-        .sidebar {
-            width: 200px;
-            background-color: #333;
-            position: fixed;
-            top: 110px; /* Height of the header */
-            left: 0;
-            bottom: 0;
-            overflow-x: hidden;
-            padding-top: 80px;
-        }
-        .sidebar a {
-            padding: 10px 15px;
-            text-decoration: none;
-            font-size: 18px;
-            color: white;
-            display: block;
-        }
-        .sidebar a:hover {
-            background-color: #575757;  
-        }
-        .container {
-            max-width: 200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-items: center;
-        }
-        .gallery .image-container {
-            /* flex: 1 1 calc(50% - 10px); */
-            width: 100%; /* Ensure two columns */
-            max-width: 600px;
-            box-sizing: border-box;
-            position: relative; 
-            /* width: 100%; */
-            /* max-width: 300px; */
-            /* max-height: 100px; */
-            padding-bottom: 400px; /* 4:3 Aspect Ratio */
-        }
-        .gallery img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-            transition: transform 0.2s;
-            object-fit: contain;
-        }
-        .gallery img:hover {
-            transform: scale(1.08);
-            /* rotate: 90deg; */
-        }
-        .contact {
-            text-align: center;
-            margin-top: 40px;
-        }
-        .contact h2 {
-            color: #333;
-        }
-        .contact p {
-            color: #555;
-        }
-        .contact a {
-            color: #4CAF50;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .contact a:hover {
-            text-decoration: underline;
-        }
-        .main {
-            margin-left: 220px; /* Width of the sidebar + some gap */
-            padding: 20px;
-            padding-top: 220px; /* Height of the header + some gap */
-            /* width: 1200px; */
-            width: calc(100% - 220px);
-        }
-        /* Modal container */
-        .modal {
-            display: none; /* Hidden by default */
-            position: fixed; /* Stay in place */
-            z-index: 1001; /* Sit on top */
-            left: 0;
-            top: 0;
-            width: 100%; /* Full width */
-            height: 100%; /* Full height */
-            overflow: auto; /* Enable scroll if needed */
-            background-color: rgba(0,0,0,0.8); /* Black with opacity */
-            justify-content: center; /* Center horizontally */
-            align-items: center; /* Center vertically */
-        }
-
-        /* Modal content (image) */
-        .modal-content {
-            max-width: 90%;
-            max-height: 90%;
-        }
-
-        /* Close button */
-        .close {
-            position: absolute;
-            top: 20px;
-            right: 35px;
-            color: #fff;
-            font-size: 40px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-
-        .close:hover,
-        .close:focus {
-            color: #bbb;
-            text-decoration: none;
-            cursor: pointer;
-        }
-
-        /* Show the modal when targeted */
-        .modal:target {
-            display: flex;
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -195,13 +21,13 @@
         <!-- <p> A tribue to the Henry Taube:</p> -->
         <section class="gallery">
             <a href="#modal1" class="image-container">
-                <img src="henry-the-pigeon/dazzeled_henry.png" alt="Dazzeled Henry">
+                <img src="henry-the-pigeon/dazzeled_henry.jpg" alt="Dazzeled Henry">
             </a>
             <a href="#modal2" class="image-container">
-                <img src="henry-the-pigeon/henry_in_the_lab.png" alt="Henry in the lab">
+                <img src="henry-the-pigeon/henry_in_the_lab.jpg" alt="Henry in the lab">
             </a>
             <a href="#modal3" class="image-container">
-                <img src="henry-the-pigeon/henry_in_the_lab_closeup.png" alt="Henry in the lab 2">
+                <img src="henry-the-pigeon/henry_in_the_lab_closeup.jpg" alt="Henry in the lab 2">
             </a>
             <a href="#modal4" class="image-container">
                 <img src="henry-the-pigeon/sad_henry.jpg" alt="Sad Henry">
@@ -210,7 +36,7 @@
                 <img src="henry-the-pigeon/rave.gif" alt="Rave Henry">
             </a>
             <a href="#modal6" class="image-container">
-                <img src="henry-the-pigeon/pcet.png" alt="PCET">
+                <img src="henry-the-pigeon/pcet.jpg" alt="PCET">
             </a>
         </section>
         <section class="contact">
@@ -220,17 +46,17 @@
     </div>
     <div id="modal1" class="modal">
         <a href="#" class="close">&times;</a>
-        <img class="modal-content" src="henry-the-pigeon/dazzeled_henry.png" 
+        <img class="modal-content" src="henry-the-pigeon/dazzeled_henry.jpg" 
             alt="dazzeled_henry">
     </div>
     <div id="modal2" class="modal">
         <a href="#" class="close">&times;</a>
-        <img class="modal-content" src="henry-the-pigeon/henry_in_the_lab.png" 
+        <img class="modal-content" src="henry-the-pigeon/henry_in_the_lab.jpg" 
             alt="Henty in the Lab">
     </div>
     <div id="modal3" class="modal">
         <a href="#" class="close">&times;</a>
-        <img class="modal-content" src="henry-the-pigeon/henry_in_the_lab_closeup.png" 
+        <img class="modal-content" src="henry-the-pigeon/henry_in_the_lab_closeup.jpg" 
             alt="Henry in the Lab">
     </div>
     <div id="modal4" class="modal">
@@ -245,7 +71,7 @@
     </div>
     <div id="modal6" class="modal">
         <a href="#" class="close">&times;</a>
-        <img class="modal-content" src="henry-the-pigeon/pcet.png" 
+        <img class="modal-content" src="henry-the-pigeon/pcet.jpg" 
             alt="PCET">
     </div>
 </body>
