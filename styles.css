@@ -48,7 +48,7 @@ header img {
     max-height: 150px; /* Ensure image does not exceed max height */
 }
 .sidebar {
-    width: 200px;
+    width: minmax(80px, 20%);
     background-color: #333;
     position: fixed;
     top: 80px; /* Height of the header */
@@ -68,20 +68,22 @@ header img {
     background-color: #575757;  
 }
 .gallery {
+    top: 140px;
+    position: sticky;
     display: grid;
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
     justify-content: center;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(600px, 100%));
     /* grid-template-columns: repeat(minmax(200px, 1fr), auto-fit); */
     grid-column-gap: 5px;
 }
 .gallery .image-container {
-    position: relative;
-    /* width: 40%; */
-    max-width: 70%;
+    position: sticky;
+    width: 40%;
+    max-width: 50%;
     min-width: 100px;
     justify-items: center;
-    margin: 20px auto;
+    margin: 10px auto;
     /* aspect-ratio: 1; */
     /* overflow: hidden; */
 }
@@ -94,7 +96,7 @@ header img {
 }
 .gallery img {
     position: relative;
-    top: 20px;
+    /* margin-top: 40px; */
     left: 0;
     width: 100%;
     height: 100%;
@@ -108,6 +110,7 @@ header img {
     /* rotate: 90deg; */
 }
 .contact {
+    position: relative;
     text-align: center;
     margin-top: 40px;
 }
@@ -180,6 +183,54 @@ header img {
 /* Set a maximum number of columns */
 @media (min-width: 900px) {
     .gallery {
-        grid-template-columns: repeat(3, 1fr); /* Maximum of 3 columns */
+        grid-template-columns: repeat(2, 1fr); /* Maximum of 3 columns */
+    }
+}
+/* Media Queries for smaller screens */
+@media (max-width: 768px) {
+    header {
+        padding: 0.5em 0;
+        max-height: 200px;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    .main {
+        margin-top: 200px;
+        padding: 10px;
+    }
+
+    .gallery {
+        grid-template-columns: 80%;
+    }
+
+    .gallery .image-container img {
+        max-height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 0.3em 0;
+        max-height: 150px;
+    }
+
+    header h1 {
+        font-size: 1.2em;
+    }
+
+    .main {
+        margin-top: 150px;
+        padding: 5px;
+    }
+
+    .gallery {
+        gap: 5px;
+    }
+
+    .gallery .image-container img {
+        max-height: 150px;
     }
 }
