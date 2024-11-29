@@ -183,7 +183,7 @@ header img {
 /* Set a maximum number of columns */
 @media (min-width: 900px) {
     .gallery {
-        grid-template-columns: repeat(2, 1fr); /* Maximum of 3 columns */
+        grid-template-columns: repeat(3, 1fr); /* Maximum of 3 columns */
     }
 }
 /* Media Queries for smaller screens */
