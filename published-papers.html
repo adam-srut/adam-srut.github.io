@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Published Papers - Adam Šrut</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const keywords = document.querySelectorAll('.keywords a');
+            const papers = document.querySelectorAll('.paper');
+
+            keywords.forEach(keyword => {
+                keyword.addEventListener('click', (e) => {
+                    e.preventDefault();
+
+                    // Toggle the active state of the clicked keyword
+                    keyword.classList.toggle('active');
+
+                    // Get all selected keywords
+                    const activeKeywords = Array.from(document.querySelectorAll('.keywords a.active')).map(k => k.textContent);
+
+                    // Filter papers based on the selected keywords
+                    if (activeKeywords.length === 0) {
+                        // If no keywords are selected, show all papers
+                        papers.forEach(paper => paper.style.display = 'flex');
+                    } else {
+                        papers.forEach(paper => {
+                            const paperKeywords = paper.dataset.keywords.split(', ');
+                            if (activeKeywords.every(kw => paperKeywords.includes(kw))) {
+                                paper.style.display = 'flex';
+                            } else {
+                                paper.style.display = 'none';
+                            }
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="published-papers.html">Publications</a></li>
+                <li><a href="cover-designs.html">Cover Designs</a></li>
+                <li><a href="cv.html">Bio</a></li>
+            </ul>
+        </nav>
+    </header>
+        </nav>
+    </header>
+    <main>
+        <h1>Publications</h1>
+
+        <b>Filter by keywords:</b>
+        <section class="keywords">
+            <a href="#" class="keyword">Electron transfer</a>
+            <a href="#" class="keyword">Nuclear coordinates</a>
+            <a href="#" class="keyword">Excited states</a>
+            <a href="#" class="keyword">Biological systems</a>
+            <a href="#" class="keyword">PCET</a>
+            <a href="#" class="keyword">Photochemistry</a>
+            <!-- <a href="#" class="keyword">Non-adiabatic dynamics</a> -->
+            
+        </section>
+
+        <section>
+            <h3>2025</h3>
+            <div class="paper" data-keywords="Biological systems, Excited states">
+                <a href="https://doi.org/10.1039/d5cp00317b" target="_blank">
+                    <p>Analyzing spectral distributions of charge transfer character in ensembles: a case study on the reaction center of photosystem II</p>
+                    <p>Adam Šrut, Sinjini Bhattacharjee, Dimitrios A. Pantazis, Vera Krewald</p>
+                    <p>Phys. Chem. Chem. Phys.</p>
+                    <p>2025</p>
+                    <p>27</p>
+                    <p>8327&ndash;8334</p>
+                </a>
+                <img src="TOCs/PCCP2025.png" alt="PSII-TOC" style="max-height: 200px; max-width: 400px;">
+            </div>
+
+            <div class="paper" data-keywords="PCET, Nuclear coordinates, Electron transfer">
+                <a href="https://doi.org/10.26434/chemrxiv-2025-36d35" target="_blank">
+                    <p>Mapping proton-coupled electron transfer with real space dimensions</p>
+                    <p>Adam Šrut, Martin Diefenbach, Marvin L. Kronenberger, Benjamin J. Lear, Vera Krewald</p>
+                    <p>Chemrxiv</p>
+                    <p>2025</p>
+                </a>
+            </div>
+
+            <h3>2024</h3>
+            <div class="paper" data-keywords="Electron transfer, Nuclear coordinates">
+                <a href="https://doi.org/10.1039/d5cp00317b" target="_blank">
+                    <p>Symmetric Electron Transfer Coordinates are Intrinsic to Bridged Systems: An ab Initio Treatment of the Creutz–Taube Ion</p>
+                    <p>Adam Šrut, Benjamin J. Lear, Vera Krewald</p>
+                    <p>Angew. Chem. Int. Ed.</p>
+                    <p>2024</p>
+                    <p>63</p>
+                    <p>e202404727.</p>
+                </a>
+                <img src="TOCs/AngewChem2024.png" alt="AngewChem-TOC">
+            </div>
+
+            <h3>2023</h3>
+            <div class="paper" data-keywords="Photochemistry, Excited states, Electron transfer">
+                <a href="https://doi.org/10.1021/acs.jpca.3c04415" target="_blank">
+                    <p>Vibrational Coherences of the Photoinduced Mixed-Valent Creutz–Taube Ion Revealed by Excited State Dynamics</p>
+                    <p>Adam Šrut, Vera Krewald</p>
+                    <p>J. Phys. Chem. A</p>
+                    <p>2023</p>
+                    <p>127</p>
+                    <p>9911-9920.</p>
+                </a>
+                <img src="TOCs/JPCA2023.png" alt="JPCA-TOC">
+            </div>
+
+            <div class="paper" data-keywords="Electron transfer, Nuclear coordinates">
+                <a href="https://doi.org/10.1039/d3sc01402a" target="_blank">
+                    <p>The Marcus dimension: identifying the nuclear coordinate for electron transfer from <i>ab initio</i> calculations</p>
+                    <p>Adam Šrut, Benjamin J. Lear, Vera Krewald</p>
+                    <p>Chem. Sci.</p>
+                    <p>2023</p>
+                    <p>14</p>
+                    <p>9213–9225.</p>
+                </a>
+                <img src="TOCs/ChemSci2023.png" alt="ChemSci-TOC">
+            </div>
+
+            <h3>2022</h3>
+            <div class="paper" data-keywords="Photochemistry, Excited states, Non-adiabatic dynamics">
+                <a href="https://doi.org/10.1039/d2cp02981b" target="_blank">
+                    <p>Nonadiabatic excited-state dynamics of ReCl(CO)3(bpy) in two different solvents</p>
+                    <p>Adam Šrut, Sebastian Mai, Igor V. Sazanovich, Jan Heyda, Antonín Vlček, Leticia González, Stanislav Záliš</p>
+                    <p>Phys. Chem. Chem. Phys.</p>
+                    <p>2022</p>
+                    <p>24</p>
+                    <p>25864-25877.</p>
+                </a>
+                <img src="TOCs/PCCP2022.gif" alt="PCCP-TOC">
+        </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-inner">
+            <div class="social-links">
+                <a href="https://github.com/adam-srut" target="_blank" aria-label="GitHub">
+                    <img src="figures/github.svg" alt="GitHub" class="social-icon">
+                    <span class="social-label">GitHub</span>
+                </a>
+                <a href="https://www.linkedin.com/in/adam-srut" target="_blank" aria-label="LinkedIn">
+                    <img src="figures/linkedin.svg" alt="LinkedIn" class="social-icon">
+                    <span class="social-label">LinkedIn</span>
+                </a>
+                <a href="https://bsky.app/profile/adamsrut.bsky.social" target="_blank" aria-label="Bluesky">
+                    <img src="figures/bluesky.svg" alt="Bluesky" class="social-icon">
+                    <span class="social-label">Bluesky</span>
+                </a>
+            </div>
+            <p>&copy; 2025 Adam Šrut</p>
+        </div>
+    </footer>
+</body>
+</html>
