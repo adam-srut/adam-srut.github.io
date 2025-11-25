@@ -474,6 +474,8 @@ ol.roman li::marker {
     border-radius: 6px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
     transition: transform 200ms ease, box-shadow 200ms ease;
+    width: 100%;
+    max-width: 100%;
 }
 
 .cover-item:hover {
@@ -485,6 +487,7 @@ ol.roman li::marker {
     width: 100%;
     height: auto;
     display: block;
+    max-height: 500px;
 }
 
 /* Cover modal styles */
