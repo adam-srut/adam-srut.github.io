@@ -68,7 +68,7 @@ main {
 .hero .main-header-img {
     display: block;
     width: 100%;
-    height: 60vh; /* fixed fraction of viewport height */
+    height: 100%;   /* 60vh; fixed fraction of viewport height */
     max-width: 100%;
     object-fit: cover; /* scale & crop to fill area while preserving aspect */
 }
@@ -193,14 +193,15 @@ main {
     object-fit: contain;
   }
 
+/* removed automatic numbering pseudo-element to avoid stray '0' marker
 .paper::before {
-    content: counter(paper-counter) ".";
-    position: absolute;
-    left: 0;
-    top: 1.2em;
-    font-weight: normal;
-    color: #333;
-  }
+        content: counter(paper-counter) ".";
+        position: absolute;
+        left: 0;
+        top: 1.2em;
+        font-weight: normal;
+        color: #333;
+    }*/
 
 /* Footer styles */
 footer {
