@@ -188,7 +188,7 @@ main {
 .paper p:first-of-type {
     display: block; /* Ensure the title appears on its own line */
     font-weight: normal; /* Highlight the title */
-    font-size: large;
+    font-size: 18px;
     margin-bottom: 5px; /* Decrease spacing between title and other information */
 }
 
