@@ -167,6 +167,7 @@ main {
 .paper {
     list-style: none; /* Disable bullet points */
     margin-left: 20px; /* Keep the indent */
+    margin-right: 10px;
     display: flex;
     align-items: flex-start; /* Align top of image with top of text */
     justify-content: space-between;
@@ -189,12 +190,12 @@ main {
     display: block; /* Ensure the title appears on its own line */
     font-weight: normal; /* Highlight the title */
     font-size: 18px;
-    margin-bottom: 5px; /* Decrease spacing between title and other information */
+    margin-bottom: 4px; /* Decrease spacing between title and other information */
 }
 
 .paper p:not(:first-of-type) {
     display: inline; /* Keep authors, journal, and year on the same line */
-    margin-right: 5px; /* Add minimal spacing between inline elements */
+    margin-right: 0px; /* Add minimal spacing between inline elements */
 }
 
 .paper p:nth-of-type(2) {
@@ -691,4 +692,20 @@ ol.roman li::marker {
 
 .contact-social a:hover {
     text-decoration: underline;
+}
+
+.oa-badge {
+    display: inline-block;
+    width: 9px;
+    height: 14px;
+    vertical-align: middle;
+    margin-left: 6px;
+    margin-bottom: 4px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("figures/open-access.svg");
+}
+
+.oa-badge svg {
+    display: block;
 }
