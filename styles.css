@@ -18,6 +18,7 @@ nav {
     position: relative;
     margin-bottom: 20px;
     border-radius: 5px; /* Rounded corners */
+    box-sizing: border-box; /* keep padding inside 100% width (no sideways scroll) */
 }
 
 nav ul {
@@ -42,20 +43,41 @@ nav ul li a:hover {
     color: #007BFF;
 }
 
+/* Mobile menu toggle (checkbox hack, no JS) — hidden on wide screens */
+.menu-toggle,
+.menu-icon {
+    display: none;
+}
+
 @media (max-width: 640px) {
     nav {
         padding: 8px 10px;
     }
-    
-    nav ul {
-        flex-wrap: wrap;
-        gap: 8px;
-    }
-    
-    nav ul li a {
-        font-size: 0.9em;
-        padding: 4px 8px;
+
+    .menu-icon {
         display: inline-block;
+        cursor: pointer;
+        font-weight: bold;
+        color: #333;
+        padding: 6px 4px;
+        user-select: none;
+    }
+
+    nav ul {
+        display: none; /* collapsed until the menu button is tapped */
+        flex-direction: column;
+        gap: 0;
+        margin: 8px 0 0;
+    }
+
+    .menu-toggle:checked ~ ul {
+        display: flex;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 10px 4px;
+        border-top: 1px solid #e0e0e0;
     }
     
     main {
